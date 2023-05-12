@@ -20,7 +20,7 @@ import { ConfigProvider } from "antd";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/oss-census-2023">
       <ConfigProvider
         theme={{
           token: {
