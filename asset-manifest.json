@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/oss-census-2023/static/css/main.80f618a6.css",
-    "main.js": "/oss-census-2023/static/js/main.005f8698.js",
+    "main.css": "/oss-census-2023/static/css/main.21d4f4b5.css",
+    "main.js": "/oss-census-2023/static/js/main.aa150cae.js",
     "static/js/787.75c5d814.chunk.js": "/oss-census-2023/static/js/787.75c5d814.chunk.js",
     "static/media/strudel_logo.png": "/oss-census-2023/static/media/strudel_logo.2a50fca379e4b75a33f2.png",
     "static/media/DataLogo.png": "/oss-census-2023/static/media/DataLogo.1879154d0747929545cc.png",
     "static/media/coexlab_logo.png": "/oss-census-2023/static/media/coexlab_logo.9fc64379ebd4bb2d798e.png",
+    "static/media/Cargo_logo_colored.png": "/oss-census-2023/static/media/Cargo_logo_colored.7e51a7b9e2310a8a1e0a.png",
     "static/media/data.svg": "/oss-census-2023/static/media/data.c2b777d815c909c00ec194c523f73568.svg",
     "index.html": "/oss-census-2023/index.html",
     "static/media/bibliography.svg": "/oss-census-2023/static/media/bibliography.14ed840ed571584471463af6a8ce2c2f.svg",
@@ -14,12 +15,12 @@
     "static/media/ecosystems.svg": "/oss-census-2023/static/media/ecosystems.972c9b855ec578baea3ab0b4e5ec853c.svg",
     "static/media/suggestions.svg": "/oss-census-2023/static/media/suggestions.0dd3908456ef11ddce9a710862564446.svg",
     "static/media/logo.svg": "/oss-census-2023/static/media/logo.d0c5c2ad9d8b6dda0db9d534f117bc63.svg",
-    "main.80f618a6.css.map": "/oss-census-2023/static/css/main.80f618a6.css.map",
-    "main.005f8698.js.map": "/oss-census-2023/static/js/main.005f8698.js.map",
+    "main.21d4f4b5.css.map": "/oss-census-2023/static/css/main.21d4f4b5.css.map",
+    "main.aa150cae.js.map": "/oss-census-2023/static/js/main.aa150cae.js.map",
     "787.75c5d814.chunk.js.map": "/oss-census-2023/static/js/787.75c5d814.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80f618a6.css",
-    "static/js/main.005f8698.js"
+    "static/css/main.21d4f4b5.css",
+    "static/js/main.aa150cae.js"
   ]
 }
