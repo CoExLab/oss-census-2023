@@ -1,0 +1,12 @@
+.ecosystem-breakdown {
+    text-align: left;
+}
+
+.ecosystem-breakdown-header {
+    align-items: baseline;
+}
+
+.highcharts-graph {
+    width: 95%;
+    margin: 0 auto;
+}

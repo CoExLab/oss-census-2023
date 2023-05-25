@@ -12,11 +12,11 @@ export default function ColumnComparison({
     <>
         <Row className="comparison-title">
             <Col span={11}>
-                <Typography.Title level={4}>{title[0]}</Typography.Title>
+                <Typography.Text strong>{title[0]}</Typography.Text>
                 <Divider style={{margin: "4px 0"}}/>
             </Col>
             <Col span={11} offset={2}>
-                <Typography.Title level={4}>{title[1]}</Typography.Title>
+                <Typography.Text strong>{title[1]}</Typography.Text>
                 <Divider style={{margin: "4px 0"}}/>
             </Col>
         </Row>
@@ -25,9 +25,9 @@ export default function ColumnComparison({
             <>
             <Row className={`comparison-metric-${metric}`}>
                 <Col span={11}>
-                    <Typography.Title level={4}>
+                    <Typography.Text strong>
                         {metric.metric}
-                    </Typography.Title>
+                    </Typography.Text>
                 </Col>
             </Row>
             <Row className={`comparison-metric-${metric}-value`}>

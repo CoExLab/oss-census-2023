@@ -11,9 +11,6 @@ import OSSLibraries from "../assets/DataLogo.png";
 import OSSEcosystemsLogo from "../assets/data_analysis/EcosystemsLogo.png";
 import YearLogo from "../assets/data_analysis/YearLogo.png";
 
-
-
-
 // For the Graphs in the Quick Facts page
 import DumbbellGraph from "../components/graphs/DumbbellGraph";
 import PercentageGraph from "../components/graphs/PercentGraph";
@@ -21,8 +18,11 @@ import PolarGraph from "../components/graphs/PolarGraph";
 import StackLineGraph from "../components/graphs/StackLineGraph";
 import QuickFactsGraph from "../components/graphs/QuickFactsGraph";
 
-
 import TabContainer from "../components/graphs-container/TabContainer";
+
+// For the Graphs in the Gallery page
+import LineGraph from "../components/graphs/LineGraph";
+import { Divider, Typography } from "antd";
 
 const texts = {
     home: {
@@ -247,7 +247,11 @@ const texts = {
                     {
                         title: "% WOMEN OVER TIME",
                         description: "The lines demonstrate the change in the number of women in open source projects with the change of time from 2008 to 2019. (The scale is not on 0-100%.)Genders in the dataset are inferred based on name and cultural background with the tool NamSor, limited by the tool's binary gender inference capability.",
-                        content: "Average across ecosystems",
+                        content: <>
+                            <Typography.Text strong>Average across ecosystems</Typography.Text>
+                            <Divider style={{borderColor: "#BDBDBD", margin: "16px 0 32px 0"}}/>
+                            <LineGraph category="Contributor" ecosystem="All" />
+                        </>,
                     }
                 ]
             },
