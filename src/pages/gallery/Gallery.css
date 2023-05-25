@@ -10,3 +10,8 @@
     width: 95%;
     margin: 0 auto;
 }
+
+.gallery-ecosystem-logo {
+    height: 45px;
+    border-radius: 0.75vw;
+}

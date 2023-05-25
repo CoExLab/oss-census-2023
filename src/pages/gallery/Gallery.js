@@ -5,7 +5,7 @@ import { Col, Row, Slider, Typography } from "antd";
 import SiderLayout from "../../components/sider-layout/SiderLayout";
 import LineGraph from "../../components/graphs/LineGraph";
 
-import { data_bar } from "../../js/data";
+import { data, data_bar } from "../../js/data";
 import texts from "../../js/texts";
 
 import "./Gallery.css";
@@ -40,7 +40,13 @@ export default function Gallery(props) {
         <Row gutter={[32, 32]} justify="left">
           {data_bar["Contributor"]["male_female"]["x_categories"].slice(1).map(
             (ecosystem, index) => {
-              return (<Col span={Math.round(22/numCols)} offset={index%numCols==0 ? 1:0}>
+              const logo = require(`../../assets/ecosystems/${ecosystem}_logo_colored.png`);
+              const color = data["Contributor"][`${ecosystem}_line`].data[0].color;
+              return (<Col span={Math.floor(22/numCols)} offset={index%numCols==0 ? 1:0}>
+                <Row align="middle" justify="start">
+                  <Col offset={1}><img className={`gallery-ecosystem-logo ${ecosystem}-logo ecosystem-logo logo sm-logo`} src={logo} /></Col>
+                  <Col offset={1}><Typography.Text style={{color}} strong>{ecosystem}</Typography.Text></Col>
+                </Row>
                 <LineGraph category={"Contributor"} ecosystem={ecosystem}/>
               </Col>);
             }

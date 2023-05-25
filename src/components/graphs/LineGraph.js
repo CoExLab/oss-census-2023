@@ -2,7 +2,7 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-import { data as all_data} from '../../js/data';
+import { data as all_data } from '../../js/data';
 
 export default function LineGraph({
     category,
