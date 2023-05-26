@@ -24,12 +24,12 @@ export default function SiderLayout({
 }) {
   return (
     <Row className={`sider-layout sider-layout-${size}`}>
-      <Col span={4} offset={1}>
+      <Col span={5} offset={1}>
         <Typography.Title className="sider-layout-title" level={getLevelFromSize(size)}>
           {title}
         </Typography.Title>
       </Col>
-      <Col span={14} style={{textAlign: "left"}} offset={3}>
+      <Col span={14} style={{textAlign: "left"}} offset={2}>
         <div className="description-container">
           <Typography.Text>{description}</Typography.Text>
         </div>
