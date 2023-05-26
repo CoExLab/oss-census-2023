@@ -22,6 +22,7 @@ import TabContainer from "../components/graphs-container/TabContainer";
 
 // For the Graphs in the Gallery page
 import LineGraph from "../components/graphs/LineGraph";
+
 import { Divider, Typography } from "antd";
 
 const texts = {
@@ -268,49 +269,6 @@ const texts = {
             siderLayout: {
                 title: "GRAPH COMPARISONS",
                 description: "Choose which of the two graph type you would want to display.\n\nContributors will show the number of active contributors working on the chosen project in a given year. Commits will show how many commits are made to the chosen project in a given year.",
-                sections: [
-                    {
-                        title: "1. CHOOSE TWO ECOSYSTEMS",
-                    },
-                    {
-                        title: "2. TOGGLE BETWEEN DIFFERENT YEARS",
-                        content: {
-                            comparison: {
-                                title: ["Atom", "Cargo"],
-                                metrics: [
-                                    {
-                                        metric: "Year",
-                                        value: ["year selector", "year selector"], // Placeholders
-                                    },
-                                    {
-                                        metric: "Commits",
-                                        value: ["bar graph", "bar graph"], // Placeholders
-                                    },
-                                    {
-                                        metric: "Contributors",
-                                        value: ["bar graph", "bar graph"], // Placeholders
-                                    },
-                                    {
-                                        metric: "Commits From Women",
-                                        value: ["bar graph", "bar graph"], // Placeholders
-                                    },
-                                    {
-                                        metric: "Contributors who are Women",
-                                        value: ["bar graph", "bar graph"], // Placeholders
-                                    },
-                                    {
-                                        metric: "% of women among all contributors over the years",
-                                        value: ["highcharts", "highcharts"], // Placeholders
-                                    },
-                                    {
-                                        metric: "# of women among all contributors over the years",
-                                        value: ["highcharts", "highcharts"], // Placeholders
-                                    },
-                                ]
-                            },
-                        },
-                    },
-                ]
             }
         }
     },

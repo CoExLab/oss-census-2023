@@ -1,0 +1,14 @@
+.ecosystem-dropdown {
+    width: 90%;
+    margin-top: 8px;
+    text-transform: none;
+}
+
+.ecosystem-dropdown .ant-typography {
+    width: 100%;
+}
+
+.ecosystem-dropdown .ant-typography .ant-space {
+    width: 100%;
+    justify-content: space-between;
+}
