@@ -190,7 +190,12 @@ const texts = {
                                     },
                                     {
                                         metric: "All vs Core",
-                                        description: "We divided contributors into two categories: core and peripheral. To identify core contributors for each ecosystem, we identified projects whose number of commits were in the top 10% of their ecosystem. Then, within each of the top projects, we identified each project's core developers as those who made more than 10% of the commits within that three-month window. We analyzed and compared gender distributions among core contributors and all contributors.",
+                                        description: <>
+                                            We divided contributors into two categories: 
+                                            <LinkButton href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8870179&casa_token=zeXxx_ecz5UAAAAA:mpOzo_72wLc-WCK19YPPtFfNShNxq0TEvOoqNFXAKFHSyhos6apVjzBV42iPTmoZbDMquMWvaQ&tag=1">
+                                                core and peripheral.
+                                            </LinkButton>To identify core contributors for each ecosystem, we identified projects whose number of commits were in the top 10% of their ecosystem. Then, within each of the top projects, we identified each project's core developers as those who made more than 10% of the commits within that three-month window. We analyzed and compared gender distributions among core contributors and all contributors."
+                                        </>,
                                         value: [
                                             <Space direction="vertical">
                                                 <QuickFactsGraph data2008="2.25" data2021="4.87"/>

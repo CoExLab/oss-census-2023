@@ -11,6 +11,7 @@ export default function QuickFactsGraph({
     const options = {
         chart: {
             type: 'column',
+            height: '250px',
         },
         title: {
             text: undefined,
@@ -29,7 +30,6 @@ export default function QuickFactsGraph({
         legend: {
             enabled: false
         },
-
         plotOptions: {
             column: {
                 pointPadding: 0.2,

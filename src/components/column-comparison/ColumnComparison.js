@@ -21,6 +21,9 @@ export default function ColumnComparison({
                     </Typography.Text>
                 </Col>
             </Row>
+            {metric.description && <Row className={`comparison-metric-description comparison-metric-${index}-description`}>
+                <Typography.Text>{metric.description}</Typography.Text>
+            </Row>}
             <Row className={`comparison-metric-value comparison-metric-${index}-value`}>
                 <Col span={11}>
                     <Typography.Text className="comparison-column-title">{title[0]}</Typography.Text>
