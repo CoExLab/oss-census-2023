@@ -16,7 +16,7 @@ import DumbbellGraph from "../components/graphs/DumbbellGraph";
 import PercentageGraph from "../components/graphs/PercentGraph";
 import PolarGraph from "../components/graphs/PolarGraph";
 import StackLineGraph from "../components/graphs/StackLineGraph";
-import QuickFactsGraph from "../components/graphs/QuickFactsGraph";
+import NeelyBarGraph from "../components/graphs/NeelyBarGraph";
 
 import TabContainer from "../components/graphs-container/TabContainer";
 import { EcosystemCard } from "../components/card/Card";
@@ -198,15 +198,15 @@ const texts = {
                                         </>,
                                         value: [
                                             <Space direction="vertical">
-                                                <QuickFactsGraph data2008="2.25" data2021="4.87"/>
+                                                <NeelyBarGraph max="7.5%" items={[{label: "2008", value: "2.25%"}, {label: "2021", value:"4.87%"}]}/> 
                                                 <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among all contributors</Typography.Text> 
-                                                <QuickFactsGraph data2008="2.13" data2021="5.27"/>
+                                                <NeelyBarGraph max="7.5%" items={[{label: "2008", value: "2.13%"}, {label: "2021", value:"5.27%"}]}/>
                                                 <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among core contributors</Typography.Text>
                                             </Space>,
                                             <Space direction="vertical">
-                                                <QuickFactsGraph data2008="3.64" data2021="6.87"/>
+                                                <NeelyBarGraph max="7.5%" items={[{label: "2008", value: "3.64%"}, {label: "2021", value:"6.87%"}]}/> 
                                                 <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among all contributors</Typography.Text> 
-                                                <QuickFactsGraph data2008="3.69" data2021="7.09"/>
+                                                <NeelyBarGraph max="7.5%" items={[{label: "2008", value: "3.69%"}, {label: "2021", value:"7.09%"}]}/> 
                                                 <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among core contributors</Typography.Text>
                                             </Space>,
                                         ],
