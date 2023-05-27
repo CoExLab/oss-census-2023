@@ -1,0 +1,13 @@
+.ecosystem-card.ant-card {
+    min-width: 275px;
+    width: fit-content;
+}
+.ecosystem-card .ant-card-body {
+    padding: 22px 38px 16px 38px;
+}
+.ecosystem-card .ant-card-meta {
+    align-items: center;
+}
+.ecosystem-card img {
+    height: 60px;
+}

@@ -19,11 +19,12 @@ import StackLineGraph from "../components/graphs/StackLineGraph";
 import QuickFactsGraph from "../components/graphs/QuickFactsGraph";
 
 import TabContainer from "../components/graphs-container/TabContainer";
+import { EcosystemCard } from "../components/card/Card";
 
 // For the Graphs in the Gallery page
 import LineGraph from "../components/graphs/LineGraph";
 
-import { Divider, Typography } from "antd";
+import { Divider, Space, Typography } from "antd";
 
 const texts = {
     home: {
@@ -177,29 +178,33 @@ const texts = {
                         description: "View a summary outlining important distinctions between open-source software libraries and public repositories",
                         content: {
                             comparison: {
-                                title: ["OSS", "Public"],
+                                title: ["Registered OSS Libraries", "GitHub Public Repositories"],
                                 metrics: [
                                     {
                                         metric: "Largest Ecosystem",
-                                        value: ["Npm", "Javascript"],
+                                        value: [<EcosystemCard ecosystem="NPM" />, <EcosystemCard ecosystem="Javascript" />],
                                     },
                                     {
                                         metric: "Community with highest women %",
-                                        value: ["CRAN", "HTML"],
+                                        value: [<EcosystemCard ecosystem="CRAN" />, <EcosystemCard ecosystem="HTML" />],
                                     },
                                     {
-                                        metric: "% of women among all contributors over the years",
+                                        metric: "All vs Core",
+                                        description: "We divided contributors into two categories: core and peripheral. To identify core contributors for each ecosystem, we identified projects whose number of commits were in the top 10% of their ecosystem. Then, within each of the top projects, we identified each project's core developers as those who made more than 10% of the commits within that three-month window. We analyzed and compared gender distributions among core contributors and all contributors.",
                                         value: [
-                                            <QuickFactsGraph data2008="2.25" data2021="4.87"/>, 
-                                            <QuickFactsGraph data2008="3.64" data2021="6.87"/>
-                                        ], // Placeholders
-                                    },
-                                    {
-                                        metric: "% of women among core contributors over the years",
-                                        value: [
-                                        <QuickFactsGraph data2008="2.13" data2021="5.27"/>, 
-                                        <QuickFactsGraph data2008="3.69" data2021="7.09"/>
-                                        ], // Placeholders
+                                            <Space direction="vertical">
+                                                <QuickFactsGraph data2008="2.25" data2021="4.87"/>
+                                                <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among all contributors</Typography.Text> 
+                                                <QuickFactsGraph data2008="2.13" data2021="5.27"/>
+                                                <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among core contributors</Typography.Text>
+                                            </Space>,
+                                            <Space direction="vertical">
+                                                <QuickFactsGraph data2008="3.64" data2021="6.87"/>
+                                                <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among all contributors</Typography.Text> 
+                                                <QuickFactsGraph data2008="3.69" data2021="7.09"/>
+                                                <Typography.Text className="comparison-value-highcharts-graph-xaxis">% women among core contributors</Typography.Text>
+                                            </Space>,
+                                        ],
                                     },
                                 ]
                             },

@@ -1,3 +1,25 @@
 .comparison-title img {
     height: 40px;
 }
+
+.comparison-metric-value .ant-space {
+    width: 90%;
+}
+.comparison-value-highcharts-graph-xaxis {
+    margin: 0 48px;
+    display: block;
+    text-align: center;
+}
+.comparison-metric-divider {
+    min-width: 95%;
+    width: 95%;
+    margin: 32px 0;
+    border-color: #E5E5E5;
+}
+.ant-row[class*="comparison-metric-"] {
+    margin: 24px 0;
+}
+.ant-row.comparison-metric-value .comparison-column-title {
+    display: block;
+    margin-bottom: 16px;
+}

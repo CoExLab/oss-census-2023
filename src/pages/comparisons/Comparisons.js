@@ -18,6 +18,8 @@ export default function Comparisons(props) {
 
   const [ecosystem1, setEcosystem1] = useState(null);
   const [ecosystem2, setEcosystem2] = useState(null);
+  const [year1, setYear1] = useState(2019);
+  const [year2, setYear2] = useState(2019);
 
   function EcosystemDropdown({ecosystemSelected, setEcosystemSelected}) {
     return (
@@ -64,14 +66,11 @@ export default function Comparisons(props) {
     }];
   
   if (ecosystem1 && ecosystem2) {
-    const logo1 = require(`../../assets/ecosystems/${ecosystem1}_logo_colored.png`);
-    const logo2 = require(`../../assets/ecosystems/${ecosystem2}_logo_colored.png`);
     sections.push({
       title: "2. TOGGLE BETWEEN DIFFERENT YEARS",
       content: {
         comparison: {
-          titleIcon: [logo1, logo2],
-          title: [ecosystem1, ecosystem2],
+          title: [`${ecosystem1} in ${year1}`, `${ecosystem2} in ${year2}`],
           metrics: [
             {
               metric: "Year",

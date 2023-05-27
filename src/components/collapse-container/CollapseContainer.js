@@ -36,7 +36,6 @@ function getSingleSection(
     } else if (content_type === "comparison") {
       content = 
         <ColumnComparison 
-          titleIcon={section.content.comparison.titleIcon}
           title={section.content.comparison.title}
           metrics={section.content.comparison.metrics}
         />;
