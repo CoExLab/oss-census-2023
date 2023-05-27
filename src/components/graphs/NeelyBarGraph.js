@@ -28,7 +28,7 @@ export default function NeelyBarGraph({
                         className="bar-graph-bar"
                         style={{
                             height:`${percentage}%`, 
-                            background: colors.at(1-index)
+                            background: colors.at(items.length-1-index)
                         }}
                     />
                 </div>

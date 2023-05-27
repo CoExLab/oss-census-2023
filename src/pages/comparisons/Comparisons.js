@@ -8,9 +8,21 @@ import SiderLayout from "../../components/sider-layout/SiderLayout";
 import NeelyBarGraph from "../../components/graphs/NeelyBarGraph";
 
 import texts from "../../js/texts";
-import { data_bar } from "../../js/data";
+import { data, data_bar } from "../../js/data";
 
 import "./Comparisons.css";
+
+function getStats(category, ecosystem, year) {
+  const eco_data = data[category][ecosystem].data;
+  const all_men = eco_data.find(e => e.name=="All Men").data;
+  const all_women = eco_data.find(e => e.name=="All Women").data;
+  const time_index = (year-2008)*4; // 2008 -> 0 -> 2008-3, 2019 -> 44 -> 2019-3
+  
+  // Note that the numbers are recorded in thousands
+  const total = Math.round((all_men[time_index] + all_women[time_index]) * 1000);
+  const percentage = (all_women[time_index] * 1000 / total) * 100;
+  return [total, `${percentage.toFixed(2)}%`];
+}
 
 function DropdownSelector({
   items,
@@ -85,6 +97,12 @@ export default function Comparisons(props) {
   }
 
   if (ecosystem1 && ecosystem2 && year1 && year2) {
+    const [commit1_total, commit1_women_percentage] = getStats("Commit", ecosystem1, year1);
+    const [commit2_total, commit2_women_percentage] = getStats("Commit", ecosystem2, year2);
+    const max_commit = Math.max(commit1_total, commit2_total) * 1.3;
+    const [contri1_total, contri1_women_percentage] = getStats("Contributor", ecosystem1, year1);
+    const [contri2_total, contri2_women_percentage] = getStats("Contributor", ecosystem2, year2);
+    const max_contri = Math.max(contri1_total, contri2_total) * 1.3;
     sections.push({
       title: "3. COMPARE",
       content: {
@@ -93,14 +111,37 @@ export default function Comparisons(props) {
           metrics: [
             {
               metric: "Commits",
-              value: [
-                "bar graph",
-                "bar graph"
-              ], // Placeholders
+              value:[
+                <Space direction="vertical">
+                    <NeelyBarGraph max={max_commit} items={[{value: commit1_total}]}/> 
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">All Commits</Typography.Text> 
+                    <NeelyBarGraph max="20%" items={[{value: commit1_women_percentage}]}/>
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">% Commits from Women</Typography.Text>
+                </Space>,
+                <Space direction="vertical">
+                    <NeelyBarGraph max={max_commit} items={[{value: commit2_total}]}/> 
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">All Commits</Typography.Text> 
+                    <NeelyBarGraph max="10%" items={[{value: commit2_women_percentage}]}/>
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">% Commits from Women</Typography.Text>
+                </Space>,
+              ]
             },
             {
               metric: "Contributors",
-              value: ["bar graph", "bar graph"], // Placeholders
+              value: [
+                <Space direction="vertical">
+                    <NeelyBarGraph max={max_contri} items={[{value: contri1_total}]}/> 
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">All Commits</Typography.Text> 
+                    <NeelyBarGraph max="20%" items={[{value: contri1_women_percentage}]}/>
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">% Commits from Women</Typography.Text>
+                </Space>,
+                <Space direction="vertical">
+                    <NeelyBarGraph max={max_contri} items={[{value: contri2_total}]}/> 
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">All Commits</Typography.Text> 
+                    <NeelyBarGraph max="10%" items={[{value: contri2_women_percentage}]}/>
+                    <Typography.Text className="comparison-value-highcharts-graph-xaxis">% Commits from Women</Typography.Text>
+                </Space>,
+              ]
             },
             {
               metric: "% of women among all contributors over the years",

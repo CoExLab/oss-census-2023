@@ -29,7 +29,7 @@ export default function ColumnComparison({
                     <Typography.Text className="comparison-column-title">{title[0]}</Typography.Text>
                     <Typography.Text>{metric.value[0]}</Typography.Text>
                 </Col>
-                <Col span={11} offset={2}>
+                <Col span={11} offset={1}>
                     <Typography.Text className="comparison-column-title">{title[1]}</Typography.Text>
                     <Typography.Text>{metric.value[1]}</Typography.Text>
                 </Col>
