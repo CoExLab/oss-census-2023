@@ -7,6 +7,7 @@ import { DownOutlined } from "@ant-design/icons";
 import SiderLayout from "../../components/sider-layout/SiderLayout";
 import NeelyBarGraph from "../../components/graphs/NeelyBarGraph";
 import LineGraph from "../../components/graphs/LineGraph";
+import WomenBarGraph from "../../components/graphs/WomenBarGraph";
 
 import texts from "../../js/texts";
 import { data, data_bar } from "../../js/data";
@@ -145,15 +146,18 @@ export default function Comparisons(props) {
               ]
             },
             {
-              metric: "% of women among all contributors over the years",
+              metric: "% of women among contributors over the years",
               value: [
                 <LineGraph category="Contributor" ecosystem={ecosystem1} />,
                 <LineGraph category="Contributor" ecosystem={ecosystem2} />,
               ],
             },
             {
-              metric: "# of women among all contributors over the years",
-              value: ["highcharts", "highcharts"], // Placeholders
+              metric: "# of women contributors over the years",
+              value: [
+                <WomenBarGraph category="Contributor" ecosystem={ecosystem1} />,
+                <WomenBarGraph category="Contributor" ecosystem={ecosystem2} />,
+              ],
             },
           ]
         },
