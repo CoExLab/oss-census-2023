@@ -27,13 +27,14 @@ function getStats(category, ecosystem, year) {
 }
 
 function DropdownSelector({
+  useIcon,
   items,
   itemSelected, 
   setItemSelected,
 }) {
   return (
   <Dropdown 
-    className="ecosystem-dropdown"
+    className="dropdown-selector"
     menu={{
       items: items.map((item, index) => {
         return {
@@ -47,6 +48,7 @@ function DropdownSelector({
     <Button>
       <Typography.Text type={itemSelected ? "primary" : "secondary"}>
         <Space>
+          {itemSelected && useIcon}
           {itemSelected ?? "Select"}
           <DownOutlined />
         </Space>
@@ -73,11 +75,27 @@ export default function Comparisons(props) {
         content: <Row align="middle">
           <Col span={8}>
             <Typography.Text strong>Ecosystem 1</Typography.Text>
-            <DropdownSelector items={ecosystems} itemSelected={ecosystem1} setItemSelected={setEcosystem1}/>
+            <DropdownSelector 
+              useIcon={ecosystem1 && ecosystem1 !== "All" && <img 
+                className="ecosystem-dropdown-item-logo" 
+                src={require(`../../assets/ecosystems/${ecosystem1}_logo_colored.png`)} 
+              />} 
+              items={ecosystems} 
+              itemSelected={ecosystem1} 
+              setItemSelected={setEcosystem1}
+            />
           </Col>
           <Col span={8} offset={4}>
             <Typography.Text strong>Ecosystem 2</Typography.Text>
-            <DropdownSelector items={ecosystems} itemSelected={ecosystem2} setItemSelected={setEcosystem2}/>
+            <DropdownSelector 
+              useIcon={ecosystem2 && ecosystem2 !== "All" && <img 
+                className="ecosystem-dropdown-item-logo" 
+                src={require(`../../assets/ecosystems/${ecosystem2}_logo_colored.png`)} 
+              />} 
+              items={ecosystems} 
+              itemSelected={ecosystem2} 
+              setItemSelected={setEcosystem2}
+            />
           </Col>
         </Row>
     }];
