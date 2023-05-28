@@ -16,6 +16,7 @@ import DumbbellGraph from "../components/graphs/DumbbellGraph";
 import PercentageGraph from "../components/graphs/PercentGraph";
 import PolarGraph from "../components/graphs/PolarGraph";
 import StackLineGraph from "../components/graphs/StackLineGraph";
+import QuickFactsGraph from "../components/graphs/QuickFactsGraph";
 import NeelyBarGraph from "../components/graphs/NeelyBarGraph";
 
 import TabContainer from "../components/graphs-container/TabContainer";
@@ -167,7 +168,7 @@ const texts = {
     },
     overview: {
         title: "Overview",
-        path: "/oss-census-2023/overview",
+        path: "/overview",
         content: {
             siderLayout: {
                 title: "Census Overview",
@@ -249,7 +250,7 @@ const texts = {
     },
     gallery: {
         title: "Gallery",
-        path: "/oss-census-2023/gallery",
+        path: "/gallery",
         content: {
             siderLayout: {
                 title: "ECOSYSTEMS GALLERY",
@@ -274,7 +275,7 @@ const texts = {
     },
     comparisons: {
         title: "Comparisons",
-        path: "/oss-census-2023/comparisons",
+        path: "/comparisons",
         content: {
             siderLayout: {
                 title: "GRAPH COMPARISONS",
@@ -284,7 +285,7 @@ const texts = {
     },
     resources: {
         title: "Resources",
-        path: "/oss-census-2023/resources",
+        path: "/resources",
         content: {
             siderLayout: {
                 title: "RESOURCES",

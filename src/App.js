@@ -20,7 +20,7 @@ import { ConfigProvider } from "antd";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/oss-census-2023">
       <ConfigProvider
         theme={{
           token: {
@@ -39,11 +39,11 @@ function App() {
           <Header />
           <div className="main-content">
             <Routes>
-              <Route exact path='/oss-census-2023' element={<Home />}></Route>
-              <Route exact path='/oss-census-2023/overview' element={<QuickFacts />}></Route>
-              <Route exact path='/oss-census-2023/gallery' element={<Gallery />}></Route>
-              <Route exact path='/oss-census-2023/comparisons' element={<Comparisons />}></Route>
-              <Route exact path='/oss-census-2023/resources' element={<Resources />}></Route>
+              <Route exact path='/' element={<Home />}></Route>
+              <Route exact path='/overview' element={<QuickFacts />}></Route>
+              <Route exact path='/gallery' element={<Gallery />}></Route>
+              <Route exact path='/comparisons' element={<Comparisons />}></Route>
+              <Route exact path='/resources' element={<Resources />}></Route>
             </Routes>
           </div>
           <Footer />
