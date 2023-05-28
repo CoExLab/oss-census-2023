@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/oss-census-2023/static/css/main.06369608.css",
-    "main.js": "/oss-census-2023/static/js/main.971dc3ca.js",
+    "main.js": "/oss-census-2023/static/js/main.95f92235.js",
     "static/js/787.75c5d814.chunk.js": "/oss-census-2023/static/js/787.75c5d814.chunk.js",
     "static/media/strudel_logo.png": "/oss-census-2023/static/media/strudel_logo.2a50fca379e4b75a33f2.png",
     "static/media/DataLogo.png": "/oss-census-2023/static/media/DataLogo.1879154d0747929545cc.png",
@@ -16,11 +16,11 @@
     "static/media/suggestions.svg": "/oss-census-2023/static/media/suggestions.0dd3908456ef11ddce9a710862564446.svg",
     "static/media/logo.svg": "/oss-census-2023/static/media/logo.d0c5c2ad9d8b6dda0db9d534f117bc63.svg",
     "main.06369608.css.map": "/oss-census-2023/static/css/main.06369608.css.map",
-    "main.971dc3ca.js.map": "/oss-census-2023/static/js/main.971dc3ca.js.map",
+    "main.95f92235.js.map": "/oss-census-2023/static/js/main.95f92235.js.map",
     "787.75c5d814.chunk.js.map": "/oss-census-2023/static/js/787.75c5d814.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.06369608.css",
-    "static/js/main.971dc3ca.js"
+    "static/js/main.95f92235.js"
   ]
 }
