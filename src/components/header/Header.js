@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Divider, Space } from "antd";
 import Icon from '@ant-design/icons';
 
-import {ReactComponent as LogoIcon} from '../../assets/logo.svg';
+import {ReactComponent as LogoIcon} from '../../assets/census_logo_colored.svg';
 
 import { useNavigate } from 'react-router-dom';
 
