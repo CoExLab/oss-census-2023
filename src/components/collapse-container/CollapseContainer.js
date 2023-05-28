@@ -59,17 +59,18 @@ function getSingleSection(
   )
 }
 export default function CollapseContainer({
-  sections = []
+  sections = [],
+  activeSections,
 }) {
   return (
     <Collapse 
       className="sections-container" 
-      defaultActiveKey={
+      activeKey={activeSections ?? 
         [`section-1${sections.length > 0 ? 
           ("-" + sections[0].title) 
           : ""}`
         ]
-      } 
+      }
       expandIconPosition="end"
       ghost
     >

@@ -188,6 +188,7 @@ export default function Comparisons(props) {
       title={text.title}
       description={text.description}
       sections={sections}
+      activeSections={sections.map(({title}, index) => `section-${index+1}-${title}`)}
     />
   );
 }

@@ -18,8 +18,8 @@ function getLevelFromSize(size) {
 export default function SiderLayout({
   title,
   description,
-  subdescription,
   sections = [],
+  activeSections,
   size = "md",
 }) {
   return (
@@ -34,7 +34,7 @@ export default function SiderLayout({
           <Typography.Text>{description}</Typography.Text>
         </div>
         <div className="sections-container" style={{marginTop: "36px"}}>
-          <CollapseContainer sections={sections} />
+          <CollapseContainer sections={sections} activeSections={activeSections}/>
         </div>
       </Col>
       <Col span={1} />
