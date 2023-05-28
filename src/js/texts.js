@@ -167,7 +167,7 @@ const texts = {
     },
     overview: {
         title: "Overview",
-        path: "/overview",
+        path: "/oss-census-2023/overview",
         content: {
             siderLayout: {
                 title: "Census Overview",
@@ -249,7 +249,7 @@ const texts = {
     },
     gallery: {
         title: "Gallery",
-        path: "/gallery",
+        path: "/oss-census-2023/gallery",
         content: {
             siderLayout: {
                 title: "ECOSYSTEMS GALLERY",
@@ -274,7 +274,7 @@ const texts = {
     },
     comparisons: {
         title: "Comparisons",
-        path: "/comparisons",
+        path: "/oss-census-2023/comparisons",
         content: {
             siderLayout: {
                 title: "GRAPH COMPARISONS",
@@ -284,7 +284,7 @@ const texts = {
     },
     resources: {
         title: "Resources",
-        path: "/resources",
+        path: "/oss-census-2023/resources",
         content: {
             siderLayout: {
                 title: "RESOURCES",
