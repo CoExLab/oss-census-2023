@@ -19,7 +19,7 @@ export default function SiderLayout({
   title,
   description,
   sections = [],
-  activeSections,
+  expandAll = false,
   size = "md",
 }) {
   return (
@@ -34,7 +34,7 @@ export default function SiderLayout({
           <Typography.Text>{description}</Typography.Text>
         </div>
         <div className="sections-container" style={{marginTop: "36px"}}>
-          <CollapseContainer sections={sections} activeSections={activeSections}/>
+          <CollapseContainer sections={sections} expandAll={expandAll}/>
         </div>
       </Col>
       <Col span={1} />

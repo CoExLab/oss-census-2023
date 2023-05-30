@@ -60,21 +60,29 @@ function getSingleSection(
 }
 export default function CollapseContainer({
   sections = [],
-  activeSections,
+  expandAll,
 }) {
-  return (
-    <Collapse 
-      className="sections-container" 
-      activeKey={activeSections ?? 
-        [`section-1${sections.length > 0 ? 
-          ("-" + sections[0].title) 
-          : ""}`
-        ]
-      }
-      expandIconPosition="end"
-      ghost
-    >
-      {sections.map(getSingleSection)}
-    </Collapse>
-  );
+  if (expandAll) {
+    return (
+      <Collapse 
+        className="sections-container" 
+        activeKey={sections.map((section, index) => `section-${index+1}-${section.title}`)}
+        expandIconPosition="end"
+        ghost
+      >
+        {sections.map(getSingleSection)}
+      </Collapse>
+    );
+  } else {
+    return (
+      <Collapse 
+        className="sections-container" 
+        defaultActiveKey={sections.length > 0 ? [`section-1-${sections[0].title}`] : []}
+        expandIconPosition="end"
+        ghost
+      >
+        {sections.map(getSingleSection)}
+      </Collapse>
+    )
+  }
 }

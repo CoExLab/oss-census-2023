@@ -141,7 +141,7 @@ export default function Comparisons(props) {
                 <Space direction="vertical">
                     <NeelyBarGraph max={max_commit} items={[{value: commit2_total}]}/> 
                     <Typography.Text className="comparison-value-highcharts-graph-xaxis">All Commits</Typography.Text> 
-                    <NeelyBarGraph max="10%" items={[{value: commit2_women_percentage}]}/>
+                    <NeelyBarGraph max="20%" items={[{value: commit2_women_percentage}]}/>
                     <Typography.Text className="comparison-value-highcharts-graph-xaxis">% Commits from Women</Typography.Text>
                 </Space>,
               ]
@@ -158,7 +158,7 @@ export default function Comparisons(props) {
                 <Space direction="vertical">
                     <NeelyBarGraph max={max_contri} items={[{value: contri2_total}]}/> 
                     <Typography.Text className="comparison-value-highcharts-graph-xaxis">All Commits</Typography.Text> 
-                    <NeelyBarGraph max="10%" items={[{value: contri2_women_percentage}]}/>
+                    <NeelyBarGraph max="20%" items={[{value: contri2_women_percentage}]}/>
                     <Typography.Text className="comparison-value-highcharts-graph-xaxis">% Commits from Women</Typography.Text>
                 </Space>,
               ]
@@ -188,7 +188,7 @@ export default function Comparisons(props) {
       title={text.title}
       description={text.description}
       sections={sections}
-      activeSections={sections.map(({title}, index) => `section-${index+1}-${title}`)}
+      expandAll={true}
     />
   );
 }
